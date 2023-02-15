@@ -7,13 +7,13 @@ function SendMessageWhatsApp(data){
     
     const options = {
         host: "graph.facebook.com",
-        path: process.env.PATH,
-        //path: '/v15.0/101918129491323/messages',
+        //path: process.env.PATH,
+        path: '/v15.0/101918129491323/messages',
         method: "POST",
         body: data,
         headers: {
             "Content-Type": "application/json",
-            Authorization: process.env.TOKEN
+            Authorization: `Bearer ${process.env.TOKEN}`
             
         }
     };
